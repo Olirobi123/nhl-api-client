@@ -1,6 +1,6 @@
 # NHL API Client
 
-> From URL chaos to clean data in one line of code
+**[Documentation en français](README.fr.md)**
 
 A lightweight, developer-friendly TypeScript client library for the NHL's web API. Get game schedules, live scores, player stats, and team information without dealing with raw HTTP requests or understanding complex endpoint patterns.
 
@@ -298,3 +298,5 @@ For issues and questions, please use the [GitHub issue tracker](https://github.c
 ## Acknowledgments
 
 This library uses the unofficial NHL web API. It is not affiliated with or endorsed by the National Hockey League.
+
+Special thanks to [Drew Hynes](https://gitlab.com/dword4/nhlapi) for his comprehensive NHL API documentation, which was invaluable in developing this client.
