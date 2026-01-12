@@ -1,5 +1,5 @@
 import { HttpClient } from '../core/http-client';
-import { ScheduleGame, ScheduleResponse, TeamScheduleResponse } from '../types/schedule';
+import { ScheduleResponse, TeamScheduleResponse } from '../types/schedule';
 import { formatDate } from '../utils/date-formatter';
 import { normalizeTeamAbbr } from '../utils/team-normalizer';
 
