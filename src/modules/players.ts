@@ -18,6 +18,10 @@ export class PlayersModule {
       throw new ValidationError('Search query cannot be empty');
     }
 
+    if (!Number.isInteger(limit) || limit <= 0) {
+      throw new ValidationError('Limit must be a positive number');
+    }
+
     const encodedQuery = encodeURIComponent(query.trim());
     return this.httpClient.get<PlayerSearchResponse>(
       `/search/player?culture=en-us&limit=${limit}&q=${encodedQuery}`
