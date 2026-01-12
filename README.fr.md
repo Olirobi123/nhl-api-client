@@ -293,7 +293,7 @@ Les contributions sont les bienvenues! N'hésitez pas à soumettre une Pull Requ
 
 ## Support
 
-Pour les problèmes et questions, veuillez utiliser le [suivi des problèmes GitHub](https://github.com/olirobi/nhl-api-client/issues).
+Pour les problèmes et questions, veuillez utiliser le [suivi des problèmes GitHub](https://github.com/Olirobi123/nhl-api-client/issues).
 
 ## Remerciements
 
