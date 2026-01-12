@@ -1,0 +1,55 @@
+{
+  "name": "@olirobi/nhl_api_client",
+  "version": "1.0.0",
+  "description": "TypeScript NHL API client - From URL chaos to clean data in one line of code",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prebuild": "rimraf dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "nhl",
+    "hockey",
+    "api",
+    "typescript",
+    "nhl-api",
+    "sports"
+  ],
+  "author": "Olivier Robitaille",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "rimraf": "^5.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olirobi123/nhl-api-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Olirobi123/nhl-api-client/issues"
+  },
+  "homepage": "https://github.com/Olirobi123/nhl-api-client#readme"
+}
