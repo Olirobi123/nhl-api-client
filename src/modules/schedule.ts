@@ -13,12 +13,9 @@ export class ScheduleModule {
    * Get today's game schedule
    * @returns Promise with schedule response
    */
-  async today(): Promise<ScheduleGame[]> {
-    let games: ScheduleGame[];
+  async today(): Promise<ScheduleResponse> {
 
-    const response: ScheduleResponse = await this.httpClient.get<ScheduleResponse>('/schedule/now');
-    games = response.gameWeek[0].games;
-    return games;
+    return this.httpClient.get<ScheduleResponse>('/schedule/now');
   }
 
   /**
