@@ -8,23 +8,22 @@ import { ValidationError } from '../core/errors';
 export class PlayersModule {
   constructor(private httpClient: HttpClient) {}
 
-  /**
-   * Search for players by name
-   * @param query - Search query (player name)
-   * @returns Promise with player search response
-   */
-  async search(query: string, limit: number = 20): Promise<PlayerSearchResponse> {
-    if (!query || typeof query !== 'string' || query.trim().length === 0) {
-      throw new ValidationError('Search query cannot be empty');
+
+  async search(playerName: string, options?: { limit?: number; active?: boolean }): Promise<PlayerSearchResponse> {
+ 
+    const { limit = 10, active = true } = options ?? {}; 
+
+    if (!playerName || typeof playerName !== 'string' || playerName.trim().length === 0) {
+      throw new ValidationError('PlayerName cannot be empty');
     }
 
     if (!Number.isInteger(limit) || limit <= 0) {
       throw new ValidationError('Limit must be a positive number');
     }
 
-    const encodedQuery = encodeURIComponent(query.trim());
+    const encodedQuery = encodeURIComponent(playerName.trim());
     return this.httpClient.get<PlayerSearchResponse>(
-      `/search/player?culture=en-us&limit=${limit}&q=${encodedQuery}`
+      `/search/player?culture=en-us&limit=${limit}&q=${encodedQuery}&active=${active}`
     );
   }
 

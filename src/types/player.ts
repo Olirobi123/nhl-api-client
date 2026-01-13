@@ -34,6 +34,7 @@ export interface PlayerSearchResult {
   birthCountry?: string;
 }
 
+
 /**
  * Player stats response (from landing page)
  */

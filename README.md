@@ -16,13 +16,13 @@ A lightweight, developer-friendly TypeScript client library for the NHL's web AP
 ## Installation
 
 ```bash
-npm install @olirobi/nhl-api-client
+npm install @olirobi/nhl_api_client
 ```
 
 ## Quick Start
 
 ```typescript
-import { NHLClient } from '@olirobi/nhl-api-client';
+import { NHLClient } from '@olirobi/nhl_api_client';
 
 const client = new NHLClient();
 
@@ -135,7 +135,7 @@ import {
   ValidationError,
   NotFoundError,
   NetworkError
-} from '@olirobi/nhl-api-client';
+} from '@olirobi/nhl_api_client';
 
 const client = new NHLClient();
 
@@ -176,7 +176,7 @@ const client = new NHLClient({
 All API responses are fully typed:
 
 ```typescript
-import { ScheduleResponse, GameScore, PlayerStatsResponse } from '@olirobi/nhl-api-client';
+import { ScheduleResponse, GameScore, PlayerStatsResponse } from '@olirobi/nhl_api_client';
 
 const games: ScheduleResponse = await client.schedule.today();
 const scores: ScoreResponse = await client.games.scores();
@@ -194,7 +194,7 @@ import {
   normalizeTeamAbbr,
   getCurrentSeasonId,
   formatDate
-} from '@olirobi/nhl-api-client';
+} from '@olirobi/nhl_api_client';
 
 // Validate and normalize team abbreviations
 const team = normalizeTeamAbbr("wpg"); // Returns "WPG"
